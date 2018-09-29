@@ -4,7 +4,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import Content from "./layout/Content";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
-import XSS from "./XSS/XSS";
+import Person from "./Person/Person";
 
 class App extends Component {
   constructor(props) {
@@ -54,7 +54,8 @@ class App extends Component {
             {/* <ChartContainer /> */}
             {/* <Animation /> */}
             {/* <Numbers /> */}
-            <XSS />
+            {/* <XSS /> */}
+            <Person />
           </Content>
 
           <Footer />
