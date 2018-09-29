@@ -36,7 +36,7 @@ class App extends Component {
     // this.testES6Features();
 
     const headerInfo = {
-      title: "Numbers App",
+      title: "React Person Form",
       url: "http://localhost:3000"
     };
 
