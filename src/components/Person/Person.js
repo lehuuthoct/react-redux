@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Person.css";
 
 class Person extends Component {
   constructor() {
@@ -51,7 +52,7 @@ class Person extends Component {
               name="firstName"
               onChange={this.handleChange}
               value={this.state.firstName}
-              className={this.state.errors ? "error" : ""}
+              className={this.state.errors.firstName ? "error" : ""}
             />
             {this.state.errors.firstName && (
               <div className="errorMessage">Required field </div>
@@ -65,7 +66,7 @@ class Person extends Component {
               name="lastName"
               onChange={this.handleChange}
               value={this.state.lastName}
-              className={this.state.errors ? "error" : ""}
+              className={this.state.errors.lastName ? "error" : ""}
             />
             {this.state.errors.lastName && (
               <div className="errorMessage">Required field</div>
