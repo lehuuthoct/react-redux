@@ -45,8 +45,8 @@ class Person extends Component {
       <div className="Person">
         <form onSubmit={this.handleSubmit}>
           {/* first name */}
-          <div>
-            <label>First name:</label>
+          <div className="row">
+            <label>First name</label>
             <input
               type="text"
               name="firstName"
@@ -59,8 +59,8 @@ class Person extends Component {
             )}
           </div>
           {/* last name */}
-          <div>
-            <label>Last name:</label>
+          <div className="row">
+            <label>Last name</label>
             <input
               type="text"
               name="lastName"
@@ -73,8 +73,8 @@ class Person extends Component {
             )}
           </div>
           {/* email */}
-          <div>
-            <label>Email:</label>
+          <div className="row">
+            <label>Email</label>
             <input
               type="text"
               name="email"
@@ -83,8 +83,8 @@ class Person extends Component {
             />
           </div>
           {/* phone */}
-          <div>
-            <label>Phone:</label>
+          <div className="row">
+            <label>Phone</label>
             <input
               type="text"
               name="phone"
@@ -93,7 +93,8 @@ class Person extends Component {
             />
           </div>
           {/* submit */}
-          <div>
+          <div className="row">
+            <label />
             <input type="submit" value="Submit" />
           </div>
         </form>

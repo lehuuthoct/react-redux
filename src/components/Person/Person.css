@@ -1,3 +1,31 @@
+.Person {
+  margin: 0 auto;
+}
+.Person form .row {
+  display: flex;
+  align-content: space-around;
+  width: 500px;
+  margin: 0 auto;
+}
+.Person form .row label {
+  width: 30%;
+  text-align: right;
+}
+
+.Person form input {
+  font-size: 16px;
+  height: 40px;
+  width: 300px;
+}
+
+.Person form button {
+  border: none;
+  color: #fff;
+  background: #0072ff;
+  height: 40px;
+  width: 300px;
+}
+
 .Person .error {
   border: 1px solid red;
 }
