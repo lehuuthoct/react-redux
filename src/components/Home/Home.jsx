@@ -39,18 +39,7 @@ class Home extends Component {
 
     return (
       <div className="Home">
-        <h1>
-          {' '}
-Welcome
-          {this.state.name}
-!
-          {' '}
-        </h1>
-        <p>
-          Additional info:
-          {' '}
-          <a href="http://youtube.com/codejobs">Codejobs</a>
-        </p>
+        <h1> Welcome {this.state.name}! </h1>
 
         <button style={buttonStyle}>Show info</button>
       </div>

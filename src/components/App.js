@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 import Popup from 'react-popup';
 import './App.css';
 import ErrorBoundary from './ErrorBoundary';
 import Content from './layout/Content';
 import Footer from './layout/Footer';
 import Header from './layout/Header';
-import Person from './Person/Person';
 import './Person/Popup.css';
 
 class App extends Component {
@@ -44,6 +44,14 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Helmet
+          title="Person Information"
+          meta={[
+            { name: 'title', content: 'Person Information' },
+            { name: 'description', content: 'Person information form' }
+          ]}
+        />
+
         <ErrorBoundary>
           <Header {...headerInfo} />
 
@@ -57,7 +65,8 @@ class App extends Component {
             {/* <Animation /> */}
             {/* <Numbers /> */}
             {/* <XSS /> */}
-            <Person />
+            {/* <Person /> */}
+            {this.props.children}
           </Content>
 
           <Footer />

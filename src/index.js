@@ -1,8 +1,10 @@
 /* eslint react/jsx-filename-extension: 'off' */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import ReactDOM, { render } from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+// init Routes
+import AppRoutes from './components/routes';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -22,5 +24,12 @@ function unmount() {
 }
 unmountBtn.addEventListener('click', unmount);
 
-ReactDOM.render(<App />, rootComponent);
+render(
+  <Router>
+    <AppRoutes />
+  </Router>,
+  rootComponent
+);
+
+// ReactDOM.render(<App />, rootComponent );
 registerServiceWorker();
