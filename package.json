@@ -19,7 +19,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint --env browser,node --ext .jsx,.js src --fix"
+    "lint": "eslint --env browser,node --ext .jsx,.js src --fix",
+    "precommit": "npm run lint",
+    "postmerge": "npm install",
+    "postrewrite": "npm install"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
