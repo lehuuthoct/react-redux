@@ -18,12 +18,13 @@
   width: 300px;
 }
 
-.Person form input[type="submit"] {
+.Person form input[type='submit'] {
   border: none;
   color: #fff;
   background: #0072ff;
   height: 40px;
   width: 300px;
+  left: 100px;
 }
 
 .Person .error {
