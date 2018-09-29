@@ -7,7 +7,11 @@ class Person extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      phone: ""
+      phone: "",
+      errors: {
+        firstName: false,
+        lastName: false
+      }
     };
   }
   handleChange = e => {
@@ -23,6 +27,12 @@ class Person extends Component {
     const { firstName, lastName, phone, email } = this.state;
 
     // init err
+    this.setState({
+      errors: {
+        firstName: firstName === "",
+        lastName: lastName === ""
+      }
+    });
 
     // log info
     const person = { firstName, lastName, phone, email };
@@ -41,7 +51,11 @@ class Person extends Component {
               name="firstName"
               onChange={this.handleChange}
               value={this.state.firstName}
+              className={this.state.errors ? "error" : ""}
             />
+            {this.state.errors.firstName && (
+              <div className="errorMessage">Required field </div>
+            )}
           </div>
           {/* last name */}
           <div>
@@ -51,7 +65,11 @@ class Person extends Component {
               name="lastName"
               onChange={this.handleChange}
               value={this.state.lastName}
+              className={this.state.errors ? "error" : ""}
             />
+            {this.state.errors.lastName && (
+              <div className="errorMessage">Required field</div>
+            )}
           </div>
           {/* email */}
           <div>
