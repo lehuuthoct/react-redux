@@ -6,6 +6,7 @@ import Content from "./layout/Content";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Person from "./Person/Person";
+import "./Person/Popup.css";
 
 class App extends Component {
   constructor(props) {

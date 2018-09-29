@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Popup from "react-popup";
 import "./Person.css";
 
 class Person extends Component {
@@ -38,6 +39,29 @@ class Person extends Component {
     // log info
     const person = { firstName, lastName, phone, email };
     console.log("Data:", person);
+
+    // show info
+    if (firstName !== "" && lastName !== "") {
+      Popup.create({
+        title: "Person Information",
+        content: (
+          <div>
+            <p>
+              {" "}
+              <strong>Name: </strong> {firstName} {lastName}{" "}
+            </p>
+          </div>
+        ),
+        buttons: {
+          right: [
+            {
+              text: "Close",
+              action: popup => popup.close() // closes the popup
+            }
+          ]
+        }
+      });
+    }
   };
 
   render() {

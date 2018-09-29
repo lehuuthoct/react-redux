@@ -12,6 +12,7 @@
   height: 150px;
   padding: 20px;
   color: white;
+  margin-bottom: 100px;
 }
 
 .App-header a {
@@ -40,7 +41,15 @@
   }
 }
 
-footer {
-  background: darkcyan;
+.app-footer {
   color: white;
+  background: rgb(58, 47, 123);
+  height: 200px;
+  text-align: center;
+}
+
+.footer-content {
+  font-size: 20px;
+  margin: 100px;
+  padding: 80px;
 }

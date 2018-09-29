@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
-    return (
-        <footer>
-            <p className="App-intro">
-                &copy;
-                    <code> LHT </code> { (new Date()).getFullYear() }
-            </p>
-        </footer>
-    )
-}
+  return (
+    <div className="app-footer">
+      <div className="footer-content">
+        &copy;
+        <code> LHT </code> {new Date().getFullYear()}
+      </div>
+    </div>
+  );
+};
 
 export default Footer;
