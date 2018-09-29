@@ -3,23 +3,26 @@ import React from 'react';
 import logo from '../../shared/images/logo.svg';
 
 const Header = props => {
-
   const { title, url } = props;
   return (
     <header className="App-header">
-      <img src={ logo } className="App-logo" alt="logo" />
+      <img src={logo} className="App-logo" alt="logo" />
 
-      <div className='App-Title'>
-        <a href={ url }> { title } </a>
+      <div className="App-Title">
+        <a href={url}>
+          {' '}
+          {title}
+          {' '}
+        </a>
       </div>
     </header>
-  )
-}
+  );
+};
 // Failed prop type: The prop `title` is marked as required in `Header`, but its value is `undefined`.
 Header.propTypes = {
   title: PropTypes.string.isRequired,
-  url: PropTypes.string,
-}
+  url: PropTypes.string
+};
 export default Header;
 
 /*  new features React 16.4.2
@@ -75,5 +78,5 @@ render() {
       Even more text here.
     </Fragment>
   );
- 
+
 */

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 
-
 class ES6Components extends Component {
   testES6Features() {
     console.log('testES6Features');
     // async await
     this.testAsyncAwait();
-    // Promises 
+    // Promises
     // classes [Component]
     this.testObjectAssign();
     this.testMap();
@@ -24,7 +23,7 @@ class ES6Components extends Component {
       const url = 'https://api.coinmarketcap.com/v1/ticker/';
       const res = await axios.get(url);
       return { coins: res.data };
-    }
+    };
     getReq().then(data => {
       console.log('data', data);
     });
@@ -34,7 +33,7 @@ class ES6Components extends Component {
     const state = {
       person: { name: 'William' }
     };
-    /*{
+    /* {
         auth: {isLoggined: true}
         person: {name: "William", address: "900 dandenong road"}
       } */
@@ -46,13 +45,10 @@ class ES6Components extends Component {
   }
 
   testMap() {
-    const tasks = [
-      { name: 'Learn React' },
-      { name: 'Learn Redux' }
-    ];
+    const tasks = [{ name: 'Learn React' }, { name: 'Learn Redux' }];
     let s = '';
     tasks.map((task, index) => {
-      s += `<li key={${index}}> ${task.name} </li>`
+      s += `<li key={${index}}> ${task.name} </li>`;
     });
     // <li key={0}> Learn React </li>
     // <li key={1}> Learn Redux </li>
@@ -75,16 +71,16 @@ class ES6Components extends Component {
   testDestructing() {
     const props = { name: 'William', salary: 90 };
     const { name, salary } = props;
-    console.log(name, salary); //William 90
+    console.log(name, salary); // William 90
     // ( {name, salary} ) => ...
   }
 
   testSpreadOperators() {
     // array spread operators
-    const items = [1]; // [1]        
+    const items = [1]; // [1]
     const updatedItems = [...items, 2]; // [1, 2]
     const updateAddObjList = [...updatedItems, { name: 'William' }];
-    console.log(updateAddObjList); //[1, 2, {name: "William"}]
+    console.log(updateAddObjList); // [1, 2, {name: "William"}]
 
     // object spread operators
     const person = {};
@@ -97,32 +93,30 @@ class ES6Components extends Component {
     const f = (a, b, ...c) => {
       const d = [a, b, c];
       return d;
-    }
-    console.log('func', f(1, 2, 3, 4)); //  [1, 2, Array(2)] 
-  };
+    };
+    console.log('func', f(1, 2, 3, 4)); //  [1, 2, Array(2)]
+  }
 
   testObjects() {
     const employee = {
       name: 'John'
-    }
+    };
     // {name: "John", address: "900 Dandenong Road"}
     employee.address = '900 Dandenong Road';
 
     // removing an attribute
-    delete employee.address;  // {name: "John"}      
+    delete employee.address; // {name: "John"}
 
     console.log(employee);
   }
 
   testVariables() {
     // var vs let - scope
-    for (let i = 0; i < 1; i++)
-      console.log(i);
+    for (let i = 0; i < 1; i++) console.log(i);
     console.log(i); // undefined
 
-    for (var i = 0; i < 1; i++)
-      console.log(i);
-    console.log(i); // i = 1    
+    for (var i = 0; i < 1; i++) console.log(i);
+    console.log(i); // i = 1
   }
 
   testConstants() {
@@ -130,7 +124,7 @@ class ES6Components extends Component {
     const arr = ['a', 'b', 'c'];
     arr.push('d'); // ["a", "b", "c", "d"]
     arr.shift(); // remove first element ["b", "c", "d"]
-    arr[0] = 'e'; // ["e", "c", "d"] 
+    arr[0] = 'e'; // ["e", "c", "d"]
     console.log(arr);
 
     // constant value cant be changed
@@ -139,10 +133,6 @@ class ES6Components extends Component {
   }
 
   render() {
-    return (
-      <div>
-        ES6 Component
-      </div>
-    )
+    return <div>ES6 Component</div>;
   }
 }

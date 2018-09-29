@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import './Timer.css';
 
 class Timer extends Component {
-
   constructor() {
-    super()
+    super();
     // init initial state
     this.state = {
       alert: {
@@ -12,13 +11,13 @@ class Timer extends Component {
         message: ''
       },
       time: 0
-    }
+    };
     // init times for work, short|long break
     this.times = {
       defaultTime: 1500, // 25 min
       shortBreak: 300, // 5 min
-      longBreak: 900, // 15 min
-    }
+      longBreak: 900 // 15 min
+    };
   }
 
   componentDidMount() {
@@ -30,7 +29,7 @@ class Timer extends Component {
     // init default time to 25 min
     this.setState({
       time: this.times.defaultTime
-    })
+    });
   }
 
   setTimeForWork = () => {
@@ -41,7 +40,7 @@ class Timer extends Component {
       }
     });
     return this.setTime(this.times.defaultTime);
-  }
+  };
 
   setTimeForShortBreak = () => {
     this.setState({
@@ -52,7 +51,7 @@ class Timer extends Component {
     });
 
     return this.setTime(this.times.shortBreak);
-  }
+  };
 
   setTimeForLongBreak = () => {
     this.setState({
@@ -63,15 +62,15 @@ class Timer extends Component {
     });
 
     return this.setTime(this.times.longBreak);
-  }
+  };
 
   setTime = newTime => {
     this.restartInterval();
 
     this.setState({
       time: newTime
-    })
-  }
+    });
+  };
 
   restartInterval = () => {
     // clear interval
@@ -79,7 +78,7 @@ class Timer extends Component {
 
     // execute counting down every 1s
     this.interval = setInterval(this.countDown, 1000);
-  }
+  };
 
   countDown = () => {
     // display 'Buzz' when time reaches 0
@@ -93,63 +92,50 @@ class Timer extends Component {
         }
       });
     } else {
-      // decrease time by 1s 
+      // decrease time by 1s
       this.setState({
         time: this.state.time - 1
       });
     }
-  }
+  };
 
   displayTimer = seconds => {
     // format time to mm:ss
-    const m = Math.floor(seconds % 3600 / 60);
-    const s = Math.floor(seconds % 3600 % 60);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = Math.floor((seconds % 3600) % 60);
 
     const formattedMsg = ` ${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
     return formattedMsg;
-  }
-
+  };
 
   render() {
-    const { alert: { message, type }, time } = this.state;
+    const {
+      alert: { message, type },
+      time
+    } = this.state;
 
     return (
       <div className="Pomodoro">
         Timer
-        {/* init message */ }
-        <div className={ `alert ${type}` }>
-          { message }
-        </div>
-
-        {/* init timer  */ }
-        <div className="timer">
-          { this.displayTimer(time) }
-        </div>
-
-        {/* init types */ }
-        <div className='types'>
-          <button
-            className='start'
-            onClick={ this.setTimeForWork }
-          >
+        {/* init message */}
+        <div className={`alert ${type}`}>{message}</div>
+        {/* init timer  */}
+        <div className="timer">{this.displayTimer(time)}</div>
+        {/* init types */}
+        <div className="types">
+          <button className="start" onClick={this.setTimeForWork}>
             Start Working
-        </button>
-          <button
-            className='short'
-            onClick={ this.setTimeForShortBreak }
-          >
+          </button>
+          <button className="short" onClick={this.setTimeForShortBreak}>
             Short Break
-        </button>
-          <button
-            className='long'
-            onClick={ this.setTimeForLongBreak }
-          >
+          </button>
+          <button className="long" onClick={this.setTimeForLongBreak}>
             Long Break
-        </button>
+          </button>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Timer; 
+export default Timer;

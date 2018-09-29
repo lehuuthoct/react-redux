@@ -1,5 +1,5 @@
-import c3 from "c3";
-import React, { Component } from "react";
+import c3 from 'c3';
+import React, { Component } from 'react';
 
 class Chart extends Component {
   componentDidMount() {
@@ -13,9 +13,9 @@ class Chart extends Component {
   }
 
   updateChart() {
-    console.log("Chart", this.props);
+    console.log('Chart', this.props);
     c3.generate({
-      bindto: "#chart",
+      bindto: '#chart',
       data: {
         columns: this.props.columns,
         type: this.props.chartType

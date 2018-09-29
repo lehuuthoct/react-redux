@@ -1,24 +1,26 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
-import "./index.css";
-import registerServiceWorker from "./registerServiceWorker";
+/* eslint react/jsx-filename-extension: 'off' */
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
+import './index.css';
+import registerServiceWorker from './registerServiceWorker';
 
 // init root component
-const rootComponent = document.getElementById("root");
+const rootComponent = document.getElementById('root');
 
 // hide unmount message
-const msgNode = document.getElementById("unmountMessage");
-msgNode.style.display = "none";
+const msgNode = document.getElementById('unmountMessage');
+msgNode.style.display = 'none';
 
 // init unmount button
-const unmountBtn = document.getElementById("unmount");
+const unmountBtn = document.getElementById('unmount');
 function unmount() {
   ReactDOM.unmountComponentAtNode(rootComponent);
-  msgNode.style.display = "block";
-  unmountBtn.style.display = "none";
+  msgNode.style.display = 'block';
+  unmountBtn.style.display = 'none';
 }
-unmountBtn.addEventListener("click", unmount);
+unmountBtn.addEventListener('click', unmount);
 
 ReactDOM.render(<App />, rootComponent);
 registerServiceWorker();

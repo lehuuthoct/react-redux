@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import "./Numbers.css";
-import Result from "./Result";
+import React, { Component } from 'react';
+import './Numbers.css';
+import Result from './Result';
 
 class Numbers extends Component {
   state = {
-    numbers: "", // save input value
+    numbers: '', // save input value
     results: [] // store results of the sum
   };
 
   handleNumberChange = e => {
     const { value } = e.target;
-    console.log("value", value);
+    console.log('value', value);
     // convert string value to array "12" => [1,2]
     const numbers = Array.from(value);
 

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./Animation.css";
+import React, { Component } from 'react';
+import './Animation.css';
 
 class Animation extends Component {
   constructor() {
@@ -10,11 +10,11 @@ class Animation extends Component {
   }
 
   componentWillUpdate(newProps, newState) {
-    console.log("newProps", newProps, newState);
+    console.log('newProps', newProps, newState);
     if (!newState.show) {
-      document.getElementById("fade").style = "opacity: 1";
+      document.getElementById('fade').style = 'opacity: 1';
     } else {
-      document.getElementById("fade").style = "opacity: 0";
+      document.getElementById('fade').style = 'opacity: 0';
     }
   }
 
@@ -29,13 +29,15 @@ class Animation extends Component {
       <div className="Animation">
         {/* Toggle Animation */}
         <button onClick={this.toggleCollapse}>
-          Toggle {this.state.show ? "Collapse" : "Expand"}
+          Toggle
+          {' '}
+          {this.state.show ? 'Collapse' : 'Expand'}
         </button>
 
         {/* Text */}
         <div
           id="fade"
-          className={this.state.show ? "transition show" : "transition"}
+          className={this.state.show ? 'transition show' : 'transition'}
         >
           Text will disappear
         </div>

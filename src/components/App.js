@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import Popup from "react-popup";
-import "./App.css";
-import ErrorBoundary from "./ErrorBoundary";
-import Content from "./layout/Content";
-import Footer from "./layout/Footer";
-import Header from "./layout/Header";
-import Person from "./Person/Person";
-import "./Person/Popup.css";
+import React, { Component } from 'react';
+import Popup from 'react-popup';
+import './App.css';
+import ErrorBoundary from './ErrorBoundary';
+import Content from './layout/Content';
+import Footer from './layout/Footer';
+import Header from './layout/Header';
+import Person from './Person/Person';
+import './Person/Popup.css';
 
 class App extends Component {
   constructor(props) {
@@ -29,17 +29,17 @@ class App extends Component {
   } */
 
   componentWillUnmount() {
-    console.log("unmount Root component");
-    document.body.style = "background: deeppink; text-align: center";
-    document.getElementById("unmountMessage").style.color = "white";
+    console.log('unmount Root component');
+    document.body.style = 'background: deeppink; text-align: center';
+    document.getElementById('unmountMessage').style.color = 'white';
   }
 
   render() {
     // this.testES6Features();
 
     const headerInfo = {
-      title: "React Person Form",
-      url: "http://localhost:3000"
+      title: 'React Person Form',
+      url: 'http://localhost:3000'
     };
 
     return (

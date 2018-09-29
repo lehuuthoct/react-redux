@@ -1,61 +1,74 @@
-import React, { Component } from "react";
-import Popup from "react-popup";
-import "./Person.css";
+import React, { Component } from 'react';
+import Popup from 'react-popup';
+import './Person.css';
 
 class Person extends Component {
   constructor() {
     super();
     this.state = {
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
       errors: {
         firstName: false,
         lastName: false
       }
     };
   }
+
   handleChange = e => {
     const { name, value } = e.target; // {target: {name, value}} = e
-    console.log("handleChange ", name, value);
+    console.log('handleChange ', name, value);
     this.setState({ [name]: value });
   };
 
   handleSubmit = e => {
-    console.log("submit form");
+    console.log('submit form');
     e.preventDefault();
     // init person data
-    const { firstName, lastName, phone, email } = this.state;
+    const {
+      firstName, lastName, phone, email
+    } = this.state;
 
     // init err
     this.setState({
       errors: {
-        firstName: firstName === "",
-        lastName: lastName === ""
+        firstName: firstName === '',
+        lastName: lastName === ''
       }
     });
 
     // log info
-    const person = { firstName, lastName, phone, email };
-    console.log("Data:", person);
+    const person = {
+      firstName,
+      lastName,
+      phone,
+      email
+    };
+    console.log('Data:', person);
 
     // show info
-    if (firstName !== "" && lastName !== "") {
+    if (firstName !== '' && lastName !== '') {
       Popup.create({
-        title: "Person Information",
+        title: 'Person Information',
         content: (
           <div>
             <p>
-              {" "}
-              <strong>Name: </strong> {firstName} {lastName}{" "}
+              {' '}
+              <strong>Name: </strong>
+              {' '}
+              {firstName}
+              {' '}
+              {lastName}
+              {' '}
             </p>
           </div>
         ),
         buttons: {
           right: [
             {
-              text: "Close",
+              text: 'Close',
               action: popup => popup.close() // closes the popup
             }
           ]
@@ -76,7 +89,7 @@ class Person extends Component {
               name="firstName"
               onChange={this.handleChange}
               value={this.state.firstName}
-              className={this.state.errors.firstName ? "error" : ""}
+              className={this.state.errors.firstName ? 'error' : ''}
             />
             {this.state.errors.firstName && (
               <div className="errorMessage">Required field </div>
@@ -90,7 +103,7 @@ class Person extends Component {
               name="lastName"
               onChange={this.handleChange}
               value={this.state.lastName}
-              className={this.state.errors.lastName ? "error" : ""}
+              className={this.state.errors.lastName ? 'error' : ''}
             />
             {this.state.errors.lastName && (
               <div className="errorMessage">Required field</div>
@@ -98,7 +111,7 @@ class Person extends Component {
           </div>
           {/* email */}
           <div className="row">
-            <label>Email</label>
+            <label id="email">Email</label>
             <input
               type="text"
               name="email"
@@ -118,7 +131,6 @@ class Person extends Component {
           </div>
           {/* submit */}
           <div className="row">
-            <label />
             <input type="submit" value="Submit" />
           </div>
         </form>

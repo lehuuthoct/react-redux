@@ -1,8 +1,8 @@
-import moment from "moment";
-import React, { Component } from "react";
-import "./Notes.css";
+import moment from 'moment';
+import React, { Component } from 'react';
+import './Notes.css';
 
-const formatTime = "YYYY-MM-DD HH:mm:ss";
+const formatTime = 'YYYY-MM-DD HH:mm:ss';
 
 class Notes extends Component {
   constructor() {
@@ -38,13 +38,19 @@ class Notes extends Component {
         <ul>
           {notes.map((note, key) => (
             <li key={key}>
-              {note.title} - {note.content}
+              {note.title}
+              {' '}
+-
+              {note.content}
             </li>
           ))}
         </ul>
 
-        {/* show last updated message*/}
-        <p>Last Update: {this.state.lastUpdate}</p>
+        {/* show last updated message */}
+        <p>
+Last Update:
+          {this.state.lastUpdate}
+        </p>
       </div>
     );
   }
