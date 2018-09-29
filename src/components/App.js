@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Popup from "react-popup";
 import "./App.css";
 import ErrorBoundary from "./ErrorBoundary";
 import Content from "./layout/Content";
@@ -60,6 +61,8 @@ class App extends Component {
 
           <Footer />
         </ErrorBoundary>
+
+        <Popup />
       </div>
     );
   }
