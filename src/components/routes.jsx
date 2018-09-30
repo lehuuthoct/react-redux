@@ -3,6 +3,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 // init components
 import App from './App';
+import Coins from './Coins';
 import Error404 from './Error/Error404';
 import Home from './Home/Home';
 import NoteDetail from './Notes/NoteDetail';
@@ -16,6 +17,7 @@ const AppRoutes = () => (
       <Route path="/" component={Home} exact />
       <Route path="/todo" component={Todo} exact />
       <Route path="/numbers" component={Numbers} exact />
+      <Route path="/coins" component={Coins} exact />
       <Route path="/note/:noteID" component={NoteDetail} exact />
       <Route component={Error404} />
     </Switch>

@@ -9,6 +9,7 @@ export default function coinReducers(state = initialState, action) {
   switch (action.type) {
     case FETCH_COINS_SUCCESS:
       const { payload: coins } = action;
+      // console.log('[R] coins', coins);
       return getNewState(state, {
         coins
       });

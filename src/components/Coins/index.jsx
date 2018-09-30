@@ -1,7 +1,5 @@
-import {
-  bindActionCreators,
-  combineReducers
-} from '../../../../../../../Library/Caches/typescript/3.0/node_modules/redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from '../../../../../../../Library/Caches/typescript/3.0/node_modules/redux';
 import { fetchCoins } from '../../actions/coinActions';
 import Coins from './Coins';
 
@@ -17,4 +15,7 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-export default combineReducers(mapStateToProps, mapDispatchToProps)(Coins);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Coins);

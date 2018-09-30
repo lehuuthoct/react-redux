@@ -8,7 +8,7 @@ import {
 
 // fetch coins
 export const fetchCoins = () => dispatch => {
-  // dispatch request action
+  // dispatch request actions
   dispatch(request(FETCH_COINS_REQUEST));
 
   // axios data

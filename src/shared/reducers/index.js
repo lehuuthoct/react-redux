@@ -1,12 +1,12 @@
 // dependencies
 import { combineReducers } from 'redux';
-import coin from '../../reducers/coinReducers';
+import coins from '../../reducers/coinReducers';
 // shared reducers
 import device from './deviceReducer';
 
 const rootReducer = combineReducers({
   device,
-  coin
+  coins
 });
 
 export default rootReducer;
