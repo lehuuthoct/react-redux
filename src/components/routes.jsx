@@ -5,12 +5,16 @@ import { Route, Switch } from 'react-router-dom';
 import App from './App';
 import Error404 from './Error/Error404';
 import Home from './Home/Home';
+import NoteDetail from './Notes/NoteDetail';
+import Todo from './Todo/Todo';
 
 // init routes
 const AppRoutes = () => (
   <App>
     <Switch>
       <Route path="/" component={Home} exact />
+      <Route path="/todo" component={Todo} exact />
+      <Route path="/note/:noteID" component={NoteDetail} exact />
       <Route component={Error404} />
     </Switch>
   </App>

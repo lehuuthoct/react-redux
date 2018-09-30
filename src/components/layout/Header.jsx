@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import logo from '../../shared/images/logo.svg';
+import Navbar from './Navbar';
 
 const Header = props => {
   const { title, url } = props;
@@ -8,13 +9,11 @@ const Header = props => {
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
 
-      <div className="App-Title">
-        <a href={url}>
-          {' '}
-          {title}
-          {' '}
-        </a>
-      </div>
+      {/* navbar */}
+      <Navbar />
+
+      {/* title */}
+      <div className="App-Title">{title}</div>
     </header>
   );
 };

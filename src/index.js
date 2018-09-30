@@ -1,9 +1,9 @@
 /* eslint react/jsx-filename-extension: 'off' */
 
+// import { App } from './components/App';
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-// init Routes
 import AppRoutes from './components/routes';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -27,6 +27,7 @@ unmountBtn.addEventListener('click', unmount);
 render(
   <Router>
     <AppRoutes />
+    {/* <App /> */}
   </Router>,
   rootComponent
 );
