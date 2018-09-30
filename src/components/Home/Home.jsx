@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Home.css';
 
 class Home extends Component {
@@ -29,6 +30,9 @@ class Home extends Component {
   }
 
   render() {
+    console.log('props', this.props);
+    const { isMobile } = this.props;
+
     const buttonStyle = {
       backgroundColor: 'gray',
       border: '1px solid deeppink',
@@ -41,10 +45,25 @@ class Home extends Component {
       <div className="Home">
         <h1> Welcome {this.state.name}! </h1>
 
+        <p>
+          You are using
+          <strong> {isMobile ? 'mobile' : 'desktop'}</strong>
+        </p>
         <button style={buttonStyle}>Show info</button>
       </div>
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  isMobile: state.device.isMobile
+});
+
+const mapDispatchToProps = dispatch => {
+  return {};
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);
