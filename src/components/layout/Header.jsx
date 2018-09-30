@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 
 const Header = props => {
   const { title, url } = props;
+  console.log(url);
   return (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
