@@ -47,6 +47,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script>
+    // detect user device
+    const isMobile = /iPhone|Android/i.test(navigator.userAgent);
+    console.log('isMobile', isMobile);
+
+    // init inital state
+    const initialState = {
+      device: {
+        isMobile
+      }
+    }
+
+    // save initialState to window object
+    window.initialState = initialState;
+    console.log('window.initialState', window.initialState);
+
+  </script>
 </body>
 
 </html>
