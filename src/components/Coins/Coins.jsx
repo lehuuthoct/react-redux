@@ -46,6 +46,7 @@ class Coins extends Component {
     return (
       <div className="coin-app">
         <div className="coin-list">
+          <h1>Top 100 Coins</h1>
           <ul>
             {coins.map((coin, key) => (
               <li key={key}>
