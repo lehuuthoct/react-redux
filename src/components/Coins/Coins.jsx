@@ -49,7 +49,10 @@ class Coins extends Component {
           <ul>
             {coins.map((coin, key) => (
               <li key={key}>
-                {coin.rank} {coin.name} {coin.symbol}
+                <span className="left">
+                  {coin.rank}. {coin.name} {coin.symbol}
+                </span>
+                <span className="right">${coin.price_usd}</span>
               </li>
             ))}
           </ul>

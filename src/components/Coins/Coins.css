@@ -20,6 +20,27 @@
   border: 1px solid darkcyan;
 }
 
+.coin-list ul {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.coin-list ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+.coin-list .right {
+  text-align: right;
+  width: 25%;
+  color: blueviolet;
+}
+
 .Coins input {
   background-color: #fff;
   border: 1px solid rgb(84, 70, 216);
