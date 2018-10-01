@@ -86,11 +86,7 @@ class Todo extends Component {
           <input value={this.state.task} onChange={this.handleOnChange} />
         </form>
 
-        <p>
-          Total tasks:
-          {totalTasks}
-          {' '}
-        </p>
+        <p> Total tasks: {totalTasks}</p>
 
         {/* show tasks */}
         <List
