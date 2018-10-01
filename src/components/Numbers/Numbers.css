@@ -3,14 +3,14 @@
 }
 
 /* hide inc/dec buttons*/
-.Numbers input[type="number"]::-webkit-inner-spin-button,
-.Numbers input[type="number"]::-webkit-outer-spin-button {
+.Numbers input[type='number']::-webkit-inner-spin-button,
+.Numbers input[type='number']::-webkit-outer-spin-button {
   margin: 0;
   -webkit-appearance: none;
 }
 
 .Numbers input {
-  width: 500px;
+  width: 100%;
   height: 60x;
   font-size: 20px;
   outline: none;
@@ -20,7 +20,7 @@
 
 .Numbers ul {
   list-style: none;
-  width: 522px;
+  width: 100%;
   margin: 0 auto; /* ul - default 22px indent */
   padding: 0;
 }

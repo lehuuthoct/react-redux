@@ -45,19 +45,6 @@ class Coins extends Component {
 
     return (
       <div className="coin-app">
-        <div className="coin-list">
-          <h1>Top 100 Coins</h1>
-          <ul>
-            {coins.map((coin, key) => (
-              <li key={key}>
-                <span className="left">
-                  {coin.rank}. {coin.name} {coin.symbol}
-                </span>
-                <span className="right">${coin.price_usd}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
         <div className="Coins">
           <h1>Buy Crypto Coins Application</h1>
 
@@ -80,6 +67,20 @@ class Coins extends Component {
               You can buy <strong> {this.state.dollars / 10}</strong> coins
             </p>
           </div>
+        </div>
+
+        <div className="coin-list">
+          <h1>Top 100 Coins</h1>
+          <ul>
+            {coins.map((coin, key) => (
+              <li key={key}>
+                <span className="left">
+                  {coin.rank}. {coin.name} {coin.symbol}
+                </span>
+                <span className="right">${coin.price_usd}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     );

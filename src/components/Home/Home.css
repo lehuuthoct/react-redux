@@ -1,25 +1,37 @@
 .Home {
-    margin: 0 auto;
-    width: 960px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.Home h1 {
-    font-size: 32px;
-    color: deeppink;
+.Home .welcome {
+  font-size: 32px;
+  color: deeppink;
+}
+
+.Home .time {
+  color: blueviolet;
+  font-size: 20px;
+}
+.Home h4 {
+  color: dodgerblue;
 }
 
 .Home p {
-    text-align: center;
-    color: teal;
+  text-align: center;
+  color: teal;
 }
 
 .Home a {
-    /* remove underline */
-    text-decoration: none;
-    color: #56D5FA;
+  /* remove underline */
+  text-decoration: none;
+  color: #56d5fa;
 }
 
 .Home a:hover {
-    color: white;
-    background-color: deeppink
+  color: white;
+  background-color: deeppink;
+}
+
+.clock {
+  background-color: #56d5fa;
 }

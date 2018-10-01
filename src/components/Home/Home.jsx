@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Home.css';
@@ -9,15 +10,15 @@ class Home extends Component {
 
     // init local state
     this.state = {
-      name: 'Robin'
+      name: 'to ...'
     };
     // bind methods
     this.updateName = this.updateName.bind(this);
   }
 
   updateName() {
-    setTimeout(() => {
-      this.setState({ name: `Robin ♡` });
+    setInterval(() => {
+      this.setState({ name: `Home` });
     }, 1000);
   }
 
@@ -36,10 +37,14 @@ class Home extends Component {
 
     return (
       <div className="Home">
-        <h1> Welcome {this.state.name}! </h1>
+        <span className="welcome"> Welcome {this.state.name}! </span>
+
+        <hr />
+
+        <span className="time">{moment().format('HH:mm:ss')}</span>
 
         <p>
-          You are using
+          Device:
           <strong> {isMobile ? 'mobile' : 'desktop'}</strong>
         </p>
       </div>
