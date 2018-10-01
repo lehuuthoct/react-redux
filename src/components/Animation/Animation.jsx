@@ -1,16 +1,16 @@
 import Radium, { StyleRoot } from 'radium';
 import React, { Component } from 'react';
-import { bounce, fadeIn } from 'react-animations';
+import { fadeIn, zoomOutUp } from 'react-animations';
 import './Animation.css';
 
 const styles = {
   fadeIn: {
-    animation: 'x 1s',
+    animation: 'x 2s',
     animationName: Radium.keyframes(fadeIn, 'fadeIn')
   },
-  bounce: {
-    animation: 'x 1s',
-    animationName: Radium.keyframes(bounce, 'bounce')
+  zoomOutUp: {
+    animation: 'x 2s',
+    animationName: Radium.keyframes(zoomOutUp, 'zoomOutUp')
   }
 };
 
@@ -58,7 +58,7 @@ class Animation extends Component {
 
           {/* Radium Animation */}
           <div className="RadiumAnimation">
-            <h3 style={styles.bounce}>Radium Animated Text</h3>
+            <h3 style={styles.zoomOutUp}>Zoom out up Text</h3>
 
             <h4 style={styles.fadeIn}>Fade In Text</h4>
           </div>
