@@ -82,10 +82,7 @@ class Todo extends Component {
     console.log('task', task);
 
     this.setState({
-      items: [
-        ...this.state.items,
-        { id: uuidv4(), task: task, completed: false }
-      ]
+      items: [...this.state.items, { id: uuidv4(), task, completed: false }]
     });
   };
 
