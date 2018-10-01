@@ -10,11 +10,11 @@ const Header = props => {
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
 
-      {/* navbar */}
-      <Navbar />
-
       {/* title */}
       <div className="App-Title">{title}</div>
+
+      {/* navbar */}
+      <Navbar />
     </header>
   );
 };
