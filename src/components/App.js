@@ -36,21 +36,20 @@ class App extends Component {
 
   render() {
     // this.testES6Features();
+    const LHTApp = 'LHT Demo Applications';
+    const meta = [
+      { name: 'title', content: LHTApp },
+      { name: 'description', content: 'React Redux Demo' }
+    ];
 
     const headerInfo = {
-      title: 'React Person Form',
+      title: LHTApp,
       url: 'http://localhost:3000'
     };
 
     return (
       <div className="App">
-        <Helmet
-          title="Person Information"
-          meta={[
-            { name: 'title', content: 'Person Information' },
-            { name: 'description', content: 'Person information form' }
-          ]}
-        />
+        <Helmet title={LHTApp} meta={meta} />
 
         <ErrorBoundary>
           <Header {...headerInfo} />
