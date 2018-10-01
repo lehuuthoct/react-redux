@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-![React Native Elements UI Toolkit] (https://raw.githubusercontent.com/lehuuthoct/react-redux/master/public/pic.png)
+![React Native Elements UI Toolkit](https://raw.githubusercontent.com/lehuuthoct/react-redux/master/public/pic.png)
 
 
 Below you will find some information on how to perform common tasks.<br>
