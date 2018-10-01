@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import uuidv4 from 'uuid/v4';
 import List from './List';
 import './Todo.css';
+import TodoForm from './TodoForm';
 
 class Todo extends Component {
   constructor() {
@@ -75,16 +76,32 @@ class Todo extends Component {
     });
   };
 
+  addTask = values => {
+    // get {task} from TodoForm
+    const { task } = values;
+    console.log('task', task);
+
+    this.setState({
+      items: [
+        ...this.state.items,
+        { id: uuidv4(), task: task, completed: false }
+      ]
+    });
+  };
+
   render() {
     const totalTasks = this.state.items.length;
 
     return (
       <div className="Todo">
         <h1>New Task: </h1>
+
         {/* init new task form */}
-        <form onSubmit={this.handleOnSubmit}>
+        <TodoForm addTask={this.addTask} />
+
+        {/* <form onSubmit={this.handleOnSubmit}>
           <input value={this.state.task} onChange={this.handleOnChange} />
-        </form>
+        </form> */}
 
         <p> Total tasks: {totalTasks}</p>
 
