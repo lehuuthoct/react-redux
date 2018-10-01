@@ -1,10 +1,18 @@
 .Animation {
   font-size: 24px;
   display: flex;
+  flex-direction: row;
+}
+
+.Animation .circle {
+  flex-grow: 1;
+  font-size: 14px;
+  justify-content: center;
 }
 
 .Animation .toggleAnimation {
-  width: 50%;
+  flex-grow: 1;
+  /* width: 50%; */
   background: #373b44; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -19,7 +27,8 @@
 }
 
 .Animation .RadiumAnimation {
-  width: 50%;
+  flex-grow: 1;
+  /* width: 50%; */
   color: darkcyan;
 }
 .Animation .transition {

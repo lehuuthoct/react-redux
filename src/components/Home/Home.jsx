@@ -10,7 +10,7 @@ class Home extends Component {
 
     // init local state
     this.state = {
-      name: 'to ...'
+      name: '...'
     };
     // bind methods
     this.updateName = this.updateName.bind(this);
@@ -18,7 +18,7 @@ class Home extends Component {
 
   updateName() {
     setInterval(() => {
-      this.setState({ name: `Home` });
+      this.setState({ name: `Home ` });
     }, 1000);
   }
 
