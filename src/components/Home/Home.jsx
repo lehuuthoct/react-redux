@@ -17,9 +17,7 @@ class Home extends Component {
 
   updateName() {
     setTimeout(() => {
-      this.setState({
-        name: `Robin ${Math.random()}`
-      });
+      this.setState({ name: `Robin ♡` });
     }, 1000);
   }
 
@@ -33,11 +31,6 @@ class Home extends Component {
     console.log('props', this.props);
     const { isMobile } = this.props;
 
-    const buttonStyle = {
-      backgroundColor: 'gray',
-      border: '1px solid deeppink',
-      color: 'white'
-    };
     // *** call this.updateName() here will
     // re-render component many times
 
@@ -49,7 +42,6 @@ class Home extends Component {
           You are using
           <strong> {isMobile ? 'mobile' : 'desktop'}</strong>
         </p>
-        <button style={buttonStyle}>Show info</button>
       </div>
     );
   }
