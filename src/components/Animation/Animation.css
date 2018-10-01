@@ -1,8 +1,28 @@
 .Animation {
-  background: deepskyblue;
   font-size: 24px;
+  display: flex;
 }
 
+.Animation .toggleAnimation {
+  width: 50%;
+  /* background: deepskyblue; */
+  background: #da4453; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #89216b,
+    #da4453
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #89216b,
+    #da4453
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Animation .RadiumAnimation {
+  width: 50%;
+  color: darkcyan;
+}
 .Animation .transition {
   color: white;
   padding-bottom: 10px;

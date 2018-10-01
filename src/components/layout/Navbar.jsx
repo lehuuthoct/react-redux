@@ -18,6 +18,9 @@ class Navbar extends Component {
           <li>
             <Link to="/coins">Coins</Link>
           </li>
+          <li>
+            <Link to="/animation">Animation</Link>
+          </li>
         </ul>
       </div>
     );

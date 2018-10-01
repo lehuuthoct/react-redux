@@ -8,7 +8,19 @@
 }
 
 .App-header {
-  background-color: darkcyan;
+  /* background-color: darkcyan; */
+  background: #fc466b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   height: 150px;
   padding: 20px;
   color: white;
@@ -53,7 +65,19 @@
 
 .app-footer {
   color: white;
-  background: rgb(58, 47, 123);
+  /* background: rgb(58, 47, 123); */
+  background: #ff0099; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff0099,
+    #493240
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff0099,
+    #493240
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+  */
+
   height: 200px;
   text-align: center;
 }

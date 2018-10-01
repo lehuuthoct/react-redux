@@ -1,5 +1,18 @@
+import Radium, { StyleRoot } from 'radium';
 import React, { Component } from 'react';
+import { bounce, fadeIn } from 'react-animations';
 import './Animation.css';
+
+const styles = {
+  fadeIn: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(fadeIn, 'fadeIn')
+  },
+  bounce: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(bounce, 'bounce')
+  }
+};
 
 class Animation extends Component {
   constructor() {
@@ -26,22 +39,31 @@ class Animation extends Component {
 
   render() {
     return (
-      <div className="Animation">
-        {/* Toggle Animation */}
-        <button onClick={this.toggleCollapse}>
-          Toggle
-          {' '}
-          {this.state.show ? 'Collapse' : 'Expand'}
-        </button>
+      <StyleRoot>
+        <div className="Animation">
+          {/* Toggle Animation */}
+          <div className="toggleAnimation">
+            <button onClick={this.toggleCollapse}>
+              Toggle {this.state.show ? 'Collapse' : 'Expand'}
+            </button>
 
-        {/* Text */}
-        <div
-          id="fade"
-          className={this.state.show ? 'transition show' : 'transition'}
-        >
-          Text will disappear
+            {/* Text */}
+            <div
+              id="fade"
+              className={this.state.show ? 'transition show' : 'transition'}
+            >
+              Text will disappear
+            </div>
+          </div>
+
+          {/* Radium Animation */}
+          <div className="RadiumAnimation">
+            <h3 style={styles.bounce}>Radium Animated Text</h3>
+
+            <h4 style={styles.fadeIn}>Fade In Text</h4>
+          </div>
         </div>
-      </div>
+      </StyleRoot>
     );
   }
 }

@@ -1,6 +1,7 @@
 // init dependencies
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Animation from './Animation/Animation';
 // init components
 import App from './App';
 import Coins from './Coins';
@@ -16,6 +17,7 @@ const AppRoutes = () => (
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/todo" component={Todo} exact />
+      <Route path="/animation" component={Animation} exact />
       <Route path="/numbers" component={Numbers} exact />
       <Route path="/coins" component={Coins} exact />
       <Route path="/note/:noteID" component={NoteDetail} exact />
