@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { bindActionCreators } from '../../../../../../../Library/Caches/typescript/3.0/node_modules/redux';
+import { bindActionCreators } from 'redux';
+
 import { fetchCoins } from '../../actions/coinActions';
 import Coins from './Coins';
 
