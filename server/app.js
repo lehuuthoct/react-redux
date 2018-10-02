@@ -10,6 +10,6 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use('/api', apiController);
-// app.use('/users', usersRouter);
+
 
 app.listen(9000);
