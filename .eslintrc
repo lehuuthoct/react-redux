@@ -8,7 +8,8 @@
     "function-paren-newline": "off",
     "max-len": [1, 120],
     "no-param-reassign": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+
   },
   "globals": {
     "document": true

@@ -39,18 +39,6 @@
     "testRun": "node scripts/test.js src --env=jsdom",
     "coverage": "node scripts/test.js src --coverage --env=jsdom"
   },
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setupTestFramework.js",
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/jest/browserMocks.js"
-    ],
-    "moduleNameMapper": {
-      "^.+\\.(scss)$": "identity-obj-proxy"
-    }
-  },
   "devDependencies": {
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
