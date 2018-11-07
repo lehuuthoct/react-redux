@@ -13,16 +13,16 @@
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "radium": "^0.25.0",
-    "react": "^16.5.2",
+    "react": "^16.6.1",
     "react-addons-css-transition-group": "^15.6.2",
     "react-animations": "^1.0.0",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.6.1",
     "react-helmet": "^5.2.0",
     "react-popup": "^0.9.3",
     "react-pose": "^3.3.6",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "2.1.1",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",
     "redux-thunk": "^2.3.0",
@@ -40,7 +40,6 @@
     "coverage": "node scripts/test.js src --coverage --env=jsdom"
   },
   "devDependencies": {
-    "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-babel": "^5.2.1",
     "eslint-plugin-import": "^2.14.0",
@@ -51,5 +50,11 @@
   "env": {
     "browser": true,
     "node": true
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
