@@ -27,3 +27,11 @@ describe('equality test suite', function () {
   })
 });
 
+describe('mock functions test suite', function () {
+  it('should support spies', function () {
+    const spy = jest.fn();
+    spy('foo');
+    expect(spy).toHaveBeenCalledWith('foo');
+  });
+});
+
